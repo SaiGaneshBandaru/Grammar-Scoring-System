@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Audio Scoring</title>
+  <link rel="stylesheet" href="home1.css">
+</head>
+<body>
+
+<div class="home-container">
+  <h1>Welcome to Audio Scoring Portal</h1>
+
+  <p>This system analyzes your audio and gives you a random score to make it fun and interactive!</p>
+
+  <div class="upload-section">
+    <h3>Upload or Record your Audio</h3>
+
+    <input type="file" id="audioUpload" accept="audio/*"><br><br>
+
+    <button onclick="generateScore()">Get Your Score</button>
+
+    <div id="result" style="margin-top: 20px; font-size: 24px; color: white;"></div>
+  </div>
+
+</div>
+
+<script>
+    function generateScore() {
+      const file = document.getElementById('audioUpload').files[0];
+  
+      if (!file) {
+        alert("Please upload an audio file.");
+        return;
+      }
+  
+      let score = (Math.random() * (5 - 2) + 2).toFixed(1);  // Random score between 2.0 to 5.0
+  
+      document.getElementById('result').innerHTML = "Your Score: " + score + " / 5 ⭐";
+    }
+  </script>
+  
+  
+
+</body>
+</html>

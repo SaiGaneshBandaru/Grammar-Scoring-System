@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);  /* Violet Pink Gradient */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+  
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .buttons .btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    margin: 10px;
+    background: white;
+    color: #7f00ff;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+  
+  .buttons .btn:hover {
+    background: #ff00c8;
+    color: white;
+  }
+  
+  @keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 20px pink; }
+  }
+  
